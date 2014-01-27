@@ -3,7 +3,8 @@ require "bootstrap_pagination/bootstrap_renderer"
 
 module BootstrapPagination
   # A custom renderer class for WillPaginate that produces markup suitable for use with Twitter Bootstrap.
-  module Rails < WillPaginate::ActionView::LinkRenderer
+  module Rails
+    include WillPaginate::ActionView::LinkRenderer
     include BootstrapRenderer
   end
 end
