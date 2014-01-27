@@ -3,8 +3,7 @@ require "bootstrap_pagination/bootstrap_renderer"
 
 module BootstrapPagination
   # A custom renderer class for WillPaginate that produces markup suitable for use with Twitter Bootstrap.
-  module Sinatra
-    include WillPaginate::Sinatra::LinkRenderer
+  class Sinatra < WillPaginate::Sinatra::LinkRenderer
     include BootstrapRenderer
   end
 end
